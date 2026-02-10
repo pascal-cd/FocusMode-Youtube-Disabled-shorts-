@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "FocusFlow: YouTube Edition",
+  "version": "1.0",
+  "description": "Elimina Shorts y distracciones de YouTube para mejorar tu enfoque.",
+  "permissions": ["storage"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
+
+
+
+
+
+
