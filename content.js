@@ -27,11 +27,12 @@ chrome.storage.local.get(['focusEnabled'], (result) => {
       });
     };
 
-    // 3. EL TRUCO DEL OBSERVADOR: YouTube carga videos nuevos mientras haces scroll.
+    // 3. YouTube carga videos nuevos mientras haces scroll.
     // Usamos MutationObserver para que nuestro script "vigile" si YouTube agrega algo nuevo.
     const observer = new MutationObserver(() => {
       eliminarShorts();
     });
     observer.observe(document.body, { childList: true, subtree: true });
   }
+
 });
