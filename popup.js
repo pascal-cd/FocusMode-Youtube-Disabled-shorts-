@@ -21,7 +21,7 @@ btn.onclick = () => {
       // Actualizamos los colores del botón en el menú
       updateUI(newState);
       
-      // 4. TRUCO DE ORO: Recargamos la pestaña de YouTube automáticamente
+      // 4. Recargamos la pestaña de YouTube automáticamente
       // para que el usuario vea el cambio al instante sin apretar F5
       chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
         if (tabs[0].url.includes("youtube.com")) {
@@ -36,4 +36,5 @@ btn.onclick = () => {
 function updateUI(isEnabled) {
   btn.textContent = isEnabled ? "Activar Shorts" : "Desactivar Shorts";
   // Si está enabled, le pone la clase 'on
+
 } 
